@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevSecOps Yassir AIT EL AIZZI Portfolio</title>
+    <meta name="description" content="Modern DevSecOps dashboard-style portfolio with logs, metrics, and CLI contact." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <div class="brand">
+          <span class="logo-glow"></span>
+          <span class="logo-text">DevSecOps Yassir AIT EL AIZZI Portfolio</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#overview">Vue d'ensemble</a>
+          <a href="#logs">Journaux</a>
+          <a href="#metrics">Métriques</a>
+          <a href="projects.html">Projets</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero / Intro -->
+      <section class="hero section">
+        <div class="container hero-inner">
+          <div class="hero-header">
+            <div class="hero-text">
+              <h1>Yassir AIT ELAIZZI — Ingénieur DevSecOps Senior</h1>
+              <p>Architecte Cloud • Expert Kubernetes • Spécialiste CI/CD • Automatisation d’infrastructure</p>
+            </div>
+            <div class="hero-profile">
+              <img src="img/my image.png" alt="Yassir AIT ELAIZZI profile" />
+            </div>
+          </div>
+          <p>
+            <a class="btn-cta" href="cvdown/Yassir_devops.pdf" download>⬇ Télécharger le CV</a>
+          </p>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-label">Clients satisfaits</span>
+              <span class="stat-value" data-count="19">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Projets réalisés</span>
+              <span class="stat-value" data-count="65">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Disponibilité</span>
+              <span class="stat-value">99.9%</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Serveurs gérés</span>
+              <span class="stat-value">1000+</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials (pipeline style) -->
+      <section id="testimonials" class="section">
+        <div class="container">
+          <h2 class="section-title">Client Testimonials</h2>
+          <p class="section-subtitle">What clients say about my work</p>
+          <div class="pipeline testimonials-pipeline">
+            <div class="pipeline-step testi-step">
+              <img class="testi-avatar" src="img/marouan.png" alt="Xperlean CEO" />
+              <div class="testi-content">
+                <div class="testi-title">Xperlean CEO</div>
+                <div class="testi-company">Xperlean.com</div>
+                <div class="testi-quote">“Yassir's expertise in DevOps and automation significantly improved our infrastructure's scalability and reliability. His attention to detail and proactive approach helped us achieve 99.9% uptime.”</div>
+                <div class="testi-author">- CEO, Xperlean</div>
+              </div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step testi-step">
+              <img class="testi-avatar" src="img/othman.png" alt="Machaussure CEO" />
+              <div class="testi-content">
+                <div class="testi-title">Machaussure CEO</div>
+                <div class="testi-company">Machaussure.ma</div>
+                <div class="testi-quote">“Thanks to Yassir, we managed to automate our deployment processes, ensuring rapid, seamless updates. Our deployment time was reduced by 80% and our team's productivity increased significantly.”</div>
+                <div class="testi-author">- CEO, Machaussure</div>
+              </div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step testi-step">
+              <img class="testi-avatar" src="img/stephan.png" alt="Lnet CEO" />
+              <div class="testi-content">
+                <div class="testi-title">Lnet CEO</div>
+                <div class="testi-company">Lnet.ma</div>
+                <div class="testi-quote">“Yassir transformed how we manage and scale our cloud infrastructure, enabling better performance and security. His expertise in Kubernetes and monitoring solutions was invaluable.”</div>
+                <div class="testi-author">- CEO, Lnet</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview -->
+      <section id="overview" class="section">
+        <div class="container">
+          <h2 class="section-title">Vue d'ensemble</h2>
+          <p class="section-subtitle">Les pods représentent les compétences et outils clés</p>
+          <div class="pods-grid">
+            <article class="pod" data-tilt>
+              <header class="pod-header">
+                <span class="dot dot-blue"></span>
+                <h3>Kubernetes & Docker</h3>
+              </header>
+              <div class="pod-body">Orchestration de 200+ services sur plusieurs clusters. 99,9% de disponibilité.</div>
+              <div class="pod-overlay">Charts Helm, Kustomize, autoscaling, service mesh, gestion multi‑clusters.</div>
+            </article>
+            <article class="pod" data-tilt>
+              <header class="pod-header">
+                <span class="dot dot-green"></span>
+                <h3>Pipelines CI/CD</h3>
+              </header>
+              <div class="pod-body">GitLab CI, Jenkins, GitHub Actions. 100% automatisé.</div>
+              <div class="pod-overlay">Pipelines multi‑étapes, tests, scans, déploiements blue/green.</div>
+            </article>
+            <article class="pod" data-tilt>
+              <header class="pod-header">
+                <span class="dot dot-purple"></span>
+                <h3>Infrastructure as Code</h3>
+              </header>
+              <div class="pod-body">Terraform & Ansible sur AWS/Azure/on‑prem.</div>
+              <div class="pod-overlay">Modules, gestion d’état, rôles réutilisables, déploiements multi‑cloud.</div>
+            </article>
+            <article class="pod" data-tilt>
+              <header class="pod-header">
+                <span class="dot dot-blue"></span>
+                <h3>Monitoring & Observabilité</h3>
+              </header>
+              <div class="pod-body">Prometheus, Grafana, ELK, Jaeger.</div>
+              <div class="pod-overlay">Tableaux de bord, alertes, traçage, agrégation et analyse des logs.</div>
+            </article>
+            <article class="pod" data-tilt>
+              <header class="pod-header">
+                <span class="dot dot-green"></span>
+                <h3>Sécurité & Conformité</h3>
+              </header>
+              <div class="pod-body">Analyse de vulnérabilités, gestion des secrets.</div>
+              <div class="pod-overlay">Vault, contrôles de politique, automatisation SOC2/ISO27001.</div>
+            </article>
+            <article class="pod" data-tilt>
+              <header class="pod-header">
+                <span class="dot dot-purple"></span>
+                <h3>Scripting & Automatisation</h3>
+              </header>
+              <div class="pod-body">Python, Bash, PowerShell, APIs.</div>
+              <div class="pod-overlay">Scripts d’automatisation, administration système, webhooks & intégrations.</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- Logs -->
+      <section id="logs" class="section">
+        <div class="container">
+          <h2 class="section-title">Journaux</h2>
+          <p class="section-subtitle">Parcours avec effet de frappe <a id="logs-show-all" class="btn-link" href="#logs">Tout afficher</a></p>
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="traffic traffic-red"></span>
+              <span class="traffic traffic-yellow"></span>
+              <span class="traffic traffic-green"></span>
+              <span class="terminal-title">/var/log/experience.log</span>
+            </div>
+            <div class="terminal-body">
+              <pre id="logs-output" class="mono"></pre>
+              <span class="caret"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metrics -->
+      <section id="metrics" class="section">
+        <div class="container">
+          <h2 class="section-title">Métriques</h2>
+          <p class="section-subtitle">Widgets de compétences façon Grafana</p>
+          <div class="metrics-grid" id="metrics-grid"></div>
+        </div>
+      </section>
+
+      <!-- Journal des compétences (recruteur) -->
+      <section id="skills-journal" class="section">
+        <div class="container">
+          <h2 class="section-title">Journal des compétences</h2>
+          <p class="section-subtitle">Aperçu des outils maîtrisés (scores) — sans cloud providers</p>
+          <div class="deploy-actions">
+            <button id="skills-show" class="btn-cta">Afficher le journal</button>
+            <a id="skills-show-all" class="btn-link" href="#skills-journal">Tout afficher</a>
+          </div>
+          <div class="terminal" aria-live="polite">
+            <div class="terminal-header">
+              <span class="traffic traffic-red"></span>
+              <span class="traffic traffic-yellow"></span>
+              <span class="traffic traffic-green"></span>
+              <span class="terminal-title">/var/log/skills.log</span>
+            </div>
+            <div class="terminal-body">
+              <pre id="skills-logs" class="mono"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Utilisez le CLI pour me contacter — ou <a class="btn-link" href="https://www.linkedin.com/in/yassiraitelaizzi/" target="_blank" rel="noopener">mon LinkedIn</a></p>
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="traffic traffic-red"></span>
+              <span class="traffic traffic-yellow"></span>
+              <span class="traffic traffic-green"></span>
+              <span class="terminal-title">/usr/bin/portfolio-cli</span>
+            </div>
+            <div class="terminal-body">
+              <div id="cli-output" class="mono"></div>
+              <div class="cli-input-line">
+                <span class="prompt mono">visitor@devops:~$</span>
+                <input id="cli-input" class="cli-input mono" type="text" autocomplete="off" placeholder="type 'help'" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-content">
+        <button class="modal-close" data-close aria-label="Close">✕</button>
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn-link">Voir sur GitHub</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <span>© 2025 DevSecOps Yassir AIT EL AIZZI Portfolio — Yassir AIT EL AIZZI — Tous droits réservés</span>
+        <span class="footer-right">Built with ❤️ and automation</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+

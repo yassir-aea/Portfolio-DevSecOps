@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projets • DevSecOps Yassir AIT EL AIZZI Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <div class="brand">
+          <span class="logo-glow"></span>
+          <span class="logo-text">DevSecOps Yassir AIT EL AIZZI Portfolio</span>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html#overview">Vue d'ensemble</a>
+          <a href="index.html#pipelines">Pipelines</a>
+          <a href="index.html#logs">Journaux</a>
+          <a href="index.html#metrics">Métriques</a>
+          <a href="projects.html" aria-current="page">Projets</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title">Projets</h1>
+          <p class="section-subtitle">Travaux sélectionnés et contributions open‑source</p>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <header class="project-header">
+                <div class="project-title">CRM Maroc — Système de gestion commerciale et comptable</div>
+                <a class="btn-cta" href="https://github.com/yassir-aea/CRM-Marocaine" target="_blank" rel="noopener">GitHub ↗</a>
+              </header>
+              <div class="project-actions">
+                <button class="project-toggle" data-target="#crm-details">Voir plus</button>
+              </div>
+              <div id="crm-details" class="project-details project-body">
+                <p class="project-intro">Je partage mon projet complet de CRM, facturation et comptabilité TVA Maroc, pensé spécifiquement pour le contexte marocain et bâti sur Django 5 et des technologies modernes.</p>
+                <ul class="project-bullets">
+                  <li>Idéal pour les petites et moyennes entreprises</li>
+                  <li>Multi‑entreprise, prêt à l’emploi et extensible</li>
+                </ul>
+                <div class="project-subtitle">Fonctionnalités :</div>
+                <ul class="project-bullets">
+                  <li>Devis, factures, avoirs (credit note)</li>
+                  <li>Bons de commande et paiements</li>
+                  <li>Gestion de la TVA</li>
+                  <li>…</li>
+                </ul>
+                <div class="project-subtitle">Technologies :</div>
+                <ul class="project-bullets">
+                  <li>Django 5 + DRF, PostgreSQL</li>
+                  <li>Redis + Celery pour les tâches asynchrones</li>
+                  <li>HTMX pour une expérience moderne</li>
+                  <li>WeasyPrint (PDF), MinIO (S3), Docker</li>
+                </ul>
+                <div class="project-subtitle">Expérience d’utilisation :</div>
+                <ul class="project-bullets">
+                  <li>Interface web moderne</li>
+                  <li>Envoi d’emails + PDF avec code QR</li>
+                  <li>Workflow avec approbation</li>
+                  <li>Support multi‑entreprise</li>
+                  <li>Open source</li>
+                </ul>
+                <p class="project-link-note">Dépôt : <a href="https://github.com/yassir-aea/CRM-Marocaine/tree/main" target="_blank" rel="noopener">GitHub/CRM-Marocaine</a></p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <header class="project-header">
+                <div class="project-title">kubeSmartService — Résolveur intelligent de services Kubernetes pour Python</div>
+                <a class="btn-cta" href="https://github.com/yassir-aea/kubeSmartService" target="_blank" rel="noopener">GitHub ↗</a>
+              </header>
+              <div class="project-actions">
+                <button class="project-toggle" data-target="#kube-details">Voir plus</button>
+              </div>
+              <div id="kube-details" class="project-details project-body">
+                <p class="project-intro">En tant que développeur DevOps, j’ai souvent rencontré des difficultés pour découvrir et superviser les services Kubernetes directement depuis mes applications Python.
+                  Même si Kubernetes gère automatiquement le service discovery et le load‑balancing, il manque souvent une couche intelligente côté application pour choisir le pod le plus sain, effectuer un failover automatique et collecter des métriques précises.
+                  C’est pour cela que j’ai développé kubeSmartService, une bibliothèque Python qui permet de :
+                </p>
+                <ul class="project-bullets">
+                  <li>Effectuer une découverte intelligente des pods et services avec cache pour réduire les appels à l’API</li>
+                  <li>Réaliser des health checks et un failover automatique si un pod est injoignable</li>
+                  <li>Collecter des métriques simples : latence, pods actifs, nombre de bascules</li>
+                  <li>Disposer d’un mode mock pour le développement local sans cluster</li>
+                  <li>Initialiser au démarrage afin d’éviter les vérifications à chaque requête</li>
+                </ul>
+                <div class="project-subtitle">Installation</div>
+                <pre class="code-block mono">pip3 install kubeSmartService</pre>
+                <p class="project-link-note">🔗 Code source & README : <a href="https://github.com/yassir-aea/kubeSmartService" target="_blank" rel="noopener">github.com/yassir-aea/kubeSmartService</a></p>
+              </div>
+            </article>
+          </div>
+
+          <h2 class="section-title" style="margin-top:24px">Replays de pipelines</h2>
+          <p class="section-subtitle">Dernières exécutions GitHub Actions (résumé)</p>
+          <div id="pipeline-replays" class="projects-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span>© 2025 DevSecOps Yassir AIT EL AIZZI Portfolio — Yassir AIT EL AIZZI — Tous droits réservés</span>
+        <span class="footer-right">Built with ❤️ and automation</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
