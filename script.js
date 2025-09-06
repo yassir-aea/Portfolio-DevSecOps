@@ -63,6 +63,7 @@ function initPipelineReplays() {
 }
 document.addEventListener('DOMContentLoaded', () => {
   setYear();
+  initHamburger();
   animateStats();
   initPipelineModal();
   initTypingLogs();
@@ -78,6 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
 function setYear() {
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
+}
+
+function initHamburger() {
+  const btn = document.getElementById('menu-toggle');
+  const nav = document.getElementById('primary-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
 }
 
 function animateStats() {
@@ -295,7 +306,7 @@ function initCLI() {
       const cmd = input.value.trim();
       if (!cmd) return;
       printLine(output, `<span class="prompt">visitor@devops:~$</span> ${escapeHtml(cmd)}`);
-      const fn = commands[cmd];
+      const fn = commands[cmd.toLowerCase()];
       if (fn) {
         const res = fn();
         if (typeof res === 'string' && res) printLine(output, res);

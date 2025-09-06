@@ -213,6 +213,7 @@ body {
 .testi-title { font-weight: 700; }
 .testi-company { color: var(--muted); font-size: 12px; }
 .testi-quote { color: var(--text); }
+.testi-quote { word-break: break-word; overflow-wrap: anywhere; }
 .testi-author { color: var(--muted); font-size: 12px; }
 
 /* Terminal */
@@ -221,6 +222,7 @@ body {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  max-width: 100%;
 }
 .terminal-header {
   display: flex;
@@ -235,8 +237,11 @@ body {
 .traffic-yellow { background: #ffbd2e; }
 .traffic-green { background: #27c93f; }
 .terminal-title { margin-left: auto; color: var(--muted); font-size: 12px; }
-.terminal-body { position: relative; padding: 16px; min-height: 220px; }
+.terminal-body { position: relative; padding: 16px; min-height: 220px; overflow: auto; }
 .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+.mono { white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; }
+pre { margin: 0; }
+.mono { white-space: pre-wrap; word-break: break-word; }
 .caret {
   position: absolute;
   width: 10px; height: 18px; background: var(--green);
@@ -377,11 +382,25 @@ body {
   .pods-grid, .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-stats { grid-template-columns: 1fr; }
 }
+.hamburger { display: none; background: transparent; border: none; cursor: pointer; padding: 8px; margin-left: auto; }
+.hamburger .bar { display: block; width: 22px; height: 2px; background: var(--text); margin: 4px 0; border-radius: 2px; }
+
 @media (max-width: 640px) {
   .pods-grid, .metrics-grid { grid-template-columns: 1fr; }
-  .nav-links { flex-wrap: wrap; justify-content: flex-end; }
+  .hamburger { display: inline-block; }
+  .nav-links { position: absolute; top: 52px; right: 20px; left: 20px; flex-direction: column; gap: 10px; background: rgba(10,14,23,0.95); padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); display: none; }
+  .nav-links.open { display: flex; }
   .pipeline { gap: 10px; }
   .hero-header { flex-direction: column-reverse; align-items: flex-start; }
+  .hero h1 { font-size: 28px; }
+  .hero-profile img { width: 96px; height: 96px; }
+  .terminal-body { max-height: 320px; }
+  pre.mono { font-size: 12px; }
+  .testimonials-pipeline { flex-direction: column; gap: 12px; align-items: stretch; }
+  .pipeline-arrow { display: none; }
+  .project-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .cli-input-line { flex-wrap: wrap; }
+  .cli-input { width: 100%; }
 }
 
 /* Nice scrollbar */
